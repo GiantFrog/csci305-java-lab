@@ -18,9 +18,9 @@ public class LastPlayBot extends Player
 
 
 	public void takeOpponentMove (Element move) {
-		lastPlay = move;
+		lastPlay = move;				//take note of what the opponent just played
 	}
 	public Element play() {
-		return lastPlay;
+		return lastPlay;				//play whatever the last play was
 	}
 }

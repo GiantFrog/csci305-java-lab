@@ -1,11 +1,7 @@
 package csci305.javalab;
 
-import java.util.Scanner;
-
 public class Human extends Player
 {
-	private Scanner scanThat;
-
 	public Human() {
 		super ("Human");
 	}
@@ -20,6 +16,7 @@ public class Human extends Player
 	{
 		System.out.println("\n1: Rock\n2: Paper\n3: Scissors\n4: Lizard\n5: Spock");
 
+		//take in the user's move choice
 		while (true)
 		{
 			System.out.print("Your move: ");

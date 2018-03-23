@@ -2,7 +2,7 @@ package csci305.javalab;
 
 public class IterativeBot extends Player
 {
-	int plays;
+	private int plays;
 	public IterativeBot() {
 		super ("Iterative Bot");
 		plays = 0;
@@ -17,7 +17,7 @@ public class IterativeBot extends Player
 
 	public Element play()
 	{
-		switch (plays%5)
+		switch (plays%5)		//Start with rock, play the next in line next time, loop back to rock.
 		{
 			case 0:
 				plays++;

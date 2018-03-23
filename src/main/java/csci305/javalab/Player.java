@@ -13,6 +13,7 @@ public abstract class Player
 	public abstract Element play();
 	public abstract void takeOpponentMove(Element move);
 
+	//any player class can pull a random choice
 	Element randChoice()
 	{
 		switch ((int)(Math.random()*5))

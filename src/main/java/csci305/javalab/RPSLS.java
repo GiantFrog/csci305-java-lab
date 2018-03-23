@@ -28,6 +28,7 @@ public class RPSLS
 		Player p2 = assignPlayer("Player 2");
 
 		System.out.print(p1.getName() + " vs. " + p2.getName() +". ");
+		//just a fun generator for a little variety. How fun.
 		switch ((int)(Math.random()*5))
 		{
 			case 0:
@@ -47,7 +48,7 @@ public class RPSLS
 				break;
 		}
 
-		for (int a = 1; a <= 5; a++)
+		for (int a = 1; a <= 5; a++)		//change this to set match length
 		{
 			Element p1move = p1.play();
 			Element p2move = p2.play();
@@ -58,6 +59,8 @@ public class RPSLS
 			System.out.print("\nRound " + a + "\n\tP1: " + p1.getName() + " chooses " + p1move.getName() + ".\n" +
 					"\tP2: " + p2.getName() + " chooses " + p2move.getName() + ".\n" +
 					"\t" + outcome + "\n\t");
+
+			//add a point to the proper winner and print the results
 			if (outcome.getOutcome().equals("Win")) {
 				System.out.println(p1.getName() + " (P1) wins the round!");
 				p1.addPoint();
@@ -90,13 +93,13 @@ public class RPSLS
 				switch (Integer.parseInt(scone.readLine()))
 				{
 					case 1:
-						System.out.println("What is the name of this player? ");
+						System.out.println("What is the name of this player? ");	//name your humans!
 						String name = scone.readLine();
 						if (name.equals("")) return new Human();
 						else return new Human(name);
 					case 2:
-						return new StupidBot();
-					case 3:
+						return new StupidBot();				//bots can also support custom names, if you
+					case 3:									//want to add prompts to name them later
 						return new RandomBot();
 					case 4:
 						return new IterativeBot();

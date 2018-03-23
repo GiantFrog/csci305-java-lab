@@ -14,6 +14,6 @@ public class RandomBot extends Player
 
 	public Element play()
 	{
-		return randChoice();
+		return randChoice();	//see Player
 	}
 }

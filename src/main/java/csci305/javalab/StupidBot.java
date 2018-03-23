@@ -15,5 +15,6 @@ public class StupidBot extends Player
 	public Element play()
 	{
 		return RPSLS.moves.get("Lizard");
+		//Lizard is the superior choice.
 	}
 }
