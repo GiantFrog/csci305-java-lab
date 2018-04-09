@@ -34,6 +34,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+run {
+    standardInput = System.in
+}
+
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'csci305.javalab.RPSLS'
 
